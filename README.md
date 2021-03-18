@@ -47,7 +47,20 @@ Note: The `.env` ("dot e-en-ve") will contain user secrets so will be `.gitignor
 1. Select the "Add New Project" button at the top-left
 1. Fill out the project information and save
    * Here are the values when using the `example-cucumberjs-wdio` repo:
-      * TODO
+     1. Name: `Example CucumberJS WDIO`
+     1. Key: `example-cucumberjs-wdio`
+     1. Description: `An example test framework comprised of CucumberJS and WebDriverIO.`
+     1. Does this project contain tests you will run on Testery?: `Yes`
+     1. Default Branch: `main`
+     1. Known Tags: {leave empty}
+     1. Testing Framework: `WebDriverIO`
+     1. Is your package.json in the root directory of your repo?: `Yes`
+     1. Location of your WebDriver config relative to your project root: `wdio.conf.js`
+     1. Default Number of Parallel Tests: `5`
+     2. Test Run Timeout (minutes): `180`
+     3. Test Timeout (seconds): `300`
+     4. Retry Failed Tests: `Yes`
+     5. Are screenshot names outputted to test output?: `Yes`
 
 ### Setup Envrionment
 1. Select "Environments" from the top navigation menu
