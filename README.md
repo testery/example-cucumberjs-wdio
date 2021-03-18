@@ -50,7 +50,8 @@ Note: The `.env` ("dot e-en-ve") will contain user secrets so will be `.gitignor
      1. Name: `Example CucumberJS WDIO`
      1. Key: `example-cucumberjs-wdio`
      1. Description: `An example test framework comprised of CucumberJS and WebDriverIO.`
-     1. Does this project contain tests you will run on Testery?: `Yes`
+     1. Does this project contain tests you will run on Testery?: `No`
+     1. Directory containing your package.json (relative to repo root): `e2e`
      1. Default Branch: `main`
      1. Known Tags: {leave empty}
      1. Testing Framework: `WebDriverIO`
