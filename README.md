@@ -10,7 +10,7 @@ Packages used are defined in [`/e2e/package.json`](/e2e/package.json).
 [Fluent Interface](https://en.wikipedia.org/wiki/Fluent_interface) </br>
 [POM (Page Object Model)](https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/) </br>
 
-## Setup
+## Local Setup
 1. Download and install the "LTS" version of [NodeJs](https://nodejs.org/en/)
 1. Clone this repo
 1. Open the [`e2e`](/e2e) folder in [VS Code](https://code.visualstudio.com/)
@@ -31,11 +31,49 @@ Note: The `.env` ("dot e-en-ve") will contain user secrets so will be `.gitignor
    * Note that the above template might be out-of-date, please check with your team lead and peers
 1. Make the necessary changes and save the file
 
-## Run All Test
+### Run All Test
 1. (If not already open) Select "Terminal" > "New Terminal"
 1. Type or paste in `npm test` and then press [Enter]
    * This is wired up in `package.json > "scripts" > "test"`
 
-## Run Test File
+### Run Test File
 1. (If not already open) Select "Terminal" > "New Terminal"
 1. Type or paste in `npx wdio run ./wdio.conf.js --spec {featureName}` and then press [Enter]
+
+## Testery - Setup Project
+[Prerequisite] You must have a Testery account.
+1. Login to [Testery](https://testery.app/login)
+1. Select "Projects" from the top navigation menu
+1. Select the "Add New Project" button at the top-left
+1. Fill out the project information and save
+   * Here are the values when using the `example-cucumberjs-wdio` repo:
+      * TODO
+
+### Setup Envrionment
+1. Select "Environments" from the top navigation menu
+1. Fill out the environment information and save
+   * Here are the values when using the `example-cucumberjs-wdio` repo:
+     1. Name: `Heroku`
+     1. Key: `heroku`
+     1. Environment URL: `https://the-internet.herokuapp.com`
+     1. Pipeline Stage: `Dev`
+     1. Add Varaible(s):
+        | Name           | Value                                | Encrypted |
+        | -------------- | ------------------------------------ | --------- |
+        | `TEST_WEB_URL` | `https://the-internet.herokuapp.com` | no        |
+        | `TEST_USER`    | `tomsmith`                           | no        |
+        | `TEST_PASS`    | `SuperSecretPassword!`               | yes       |
+
+### Run Tests
+1. Select "Test Runs" from the top navigation menu
+1. Select the "New Test Run" button at the top-right
+1.Fill out the test run information
+   * Here are the values when using the `example-cucumberjs-wdio` repo:
+     1. Project With Tests: `Example CucumberJS WDIO (example-cucumberjs-wdio)`
+     1. Environment To Run Tests Against: `Heroku`
+     1. Schedule: `Run Now`
+     1. Branch: `main`
+     1. Commit: `latest`
+     1. Leave the "filters" empty
+     1. Unselect "Follow Test Run"
+1. Select "Run Test"
