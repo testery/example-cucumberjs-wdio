@@ -6,6 +6,7 @@ export function clickIfExists(selector: string) {
     try { browser.$(element).click(); } catch { /**/ }
     element.waitForExist({ timeout: testData.defaultTimeout, reverse: true });
 }
+
 export function findByPartialText(elementText: string) {
     let selector = '//*[contains(text(),"' + elementText + '")]';
     return $(selector);
