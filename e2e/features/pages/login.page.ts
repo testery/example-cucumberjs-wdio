@@ -8,7 +8,7 @@ class LoginPage {
     /** The `input` for "Password". */
     get inputPassword() { return "#password" }
     /** The `button` to submit a form. */
-    get buttonSubmit() { return "'button[type='submit']" }
+    get buttonSubmit() { return "//button[@type='submit']" }
 
     /** Opens `this` page. */
     open() {
