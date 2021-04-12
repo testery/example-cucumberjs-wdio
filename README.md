@@ -18,7 +18,7 @@ Packages used are defined in [`/e2e/package.json`](/e2e/package.json).
 1. Select "Terminal" > "New Terminal"
 1. Type or paste in `npm install` and then press [Enter]
 
-### Create a .env file
+### Create a .env file Locally
 Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored` and never checked in.
 1. Open the [`e2e`](/e2e) folder in [VS Code](https://code.visualstudio.com/)
 1. Right-click in the empty space of the 'Explorer' pane in VS Code and then select 'New File'
@@ -32,12 +32,12 @@ Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored
    * Note that the above template might be out-of-date, please check with your team lead and peers
 1. Make the necessary changes and save the file
 
-### Run All Test
+### Run All Test Locally
 1. (If not already open) Select "Terminal" > "New Terminal"
 1. Type or paste in `npm test` and then press [Enter]
    * This is wired up in `package.json > "scripts" > "test"`
 
-### Run Test File
+### Run Test File Locally
 1. (If not already open) Select "Terminal" > "New Terminal"
 1. Type or paste in `npx wdio run ./wdio.conf.js --spec {featureName}` and then press [Enter]
 
@@ -64,7 +64,7 @@ Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored
      4. Retry Failed Tests: `Yes`
      5. Are screenshot names outputted to test output?: `Yes`
 
-### Setup Envrionment
+### Setup Envrionment in Testery Web App
 1. Select "Environments" from the top navigation menu
 1. Fill out the environment information and save
    * Here are the values when using the `example-cucumberjs-wdio` repo:
@@ -79,7 +79,7 @@ Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored
         | `TEST_USER`    | `tomsmith`                           | no        |
         | `TEST_PASS`    | `SuperSecretPassword!`               | yes       |
 
-### Run Tests
+### Run Tests in Testery Web App
 1. Select "Test Runs" from the top navigation menu
 1. Select the "New Test Run" button at the top-right
 1.Fill out the test run information
