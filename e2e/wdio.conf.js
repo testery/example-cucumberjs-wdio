@@ -236,11 +236,11 @@ exports.config = {
      */
      afterStep: function (step, context) {
         let fs = require('fs');
-        if (!fs.existsSync("./screenshots")) {
+        if (!fs.existsSync("../screenshots")) {
             console.log("Screenshots dir being created.");
-            fs.mkdirSync("./screenshots");
+            fs.mkdirSync("../screenshots");
         }
-        browser.saveScreenshot("./screenshots/" + new Date().getTime().toString() + ".png");
+        browser.saveScreenshot("../screenshots/" + new Date().getTime().toString() + ".png");
     },
     /**
      * Runs after a Cucumber scenario
