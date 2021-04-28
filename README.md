@@ -39,7 +39,8 @@ Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored
 
 ### Run Test File Locally
 1. (If not already open) Select "Terminal" > "New Terminal"
-1. Type or paste in `npx wdio run ./wdio.conf.js --spec {featureName}` and then press [Enter]
+1. Type or paste in `npm test -- --spec {featureName}` and then press [Enter]
+   * For example, `npm test -- --spec login` will run any/all .feature files (specs) with `login` in the file name  
 
 ## Setup Project in Testery Web App
 [Prerequisite] You must have a Testery account.
