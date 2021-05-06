@@ -10,7 +10,13 @@ Packages used are defined in [`/e2e/package.json`](/e2e/package.json).
 [Fluent Interface](https://en.wikipedia.org/wiki/Fluent_interface) </br>
 [POM (Page Object Model)](https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/) </br>
 
+## Quick Start Guide
+Click the image below and then select the 'Download' button. This video will cover the next section, "Local Setup", of this README.
+[![Screenshot](/quick-start-guide.png)](/quick-start-guide.mp4)
+
 ## Local Setup
+
+### Download and Install Packages
 1. Download and install the "LTS" version of [NodeJs](https://nodejs.org/en/)
 1. Clone this repo
 1. Open the [`e2e`](/e2e) folder in [VS Code](https://code.visualstudio.com/)
@@ -42,10 +48,12 @@ Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored
 1. Type or paste in `npm test -- --spec {featureName}` and then press [Enter]
    * For example, `npm test -- --spec login` will run any/all .feature files (specs) with `login` in the file name  
 
-## Setup Project in Testery Web App
+## Account Admins - One Time Setup
+
+### Setup Project in Testery Web App
 [Prerequisite] You must have a Testery account.
 1. Login to [Testery](https://testery.app/login)
-1. Select "Projects" from the top navigation menu
+1. Select "Projects" from the navigation menu
 1. Select the "Add New Project" button at the top-left
 1. Fill out the project information and save
    * Here are the values when using the `example-cucumberjs-wdio` repo:
@@ -66,7 +74,7 @@ Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored
      5. Are screenshot names outputted to test output?: `Yes`
 
 ### Setup Envrionment in Testery Web App
-1. Select "Environments" from the top navigation menu
+1. Select "Environments" from the navigation menu
 1. Fill out the environment information and save
    * Here are the values when using the `example-cucumberjs-wdio` repo:
      1. Name: `Heroku`
@@ -81,7 +89,7 @@ Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored
         | `TEST_PASS`    | `SuperSecretPassword!`               | yes       |
 
 ### Run Tests in Testery Web App
-1. Select "Test Runs" from the top navigation menu
+1. Select "Test Runs" from the navigation menu
 1. Select the "New Test Run" button at the top-right
 1.Fill out the test run information
    * Here are the values when using the `example-cucumberjs-wdio` repo:
