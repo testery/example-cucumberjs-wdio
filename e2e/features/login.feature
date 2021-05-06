@@ -1,12 +1,6 @@
-Feature: Login page
+Feature: Login Page
 
-  Scenario Outline: As a user, I can log into the secure area
-
-    Given I open the login page
-    When I login with <username> and <password>
-    Then I should see a message saying <message>
-
-    Examples:
-      | username | password | message                        |
-      | valid    | valid    | You logged into a secure area! |
-      | foobar   | barfoo   | Your username is invalid!      |
+    Scenario: Login using valid credentials
+        Given I am an unauthenticated user viewing the login page
+        When I log in using my email and password
+        Then I am redirected the Account Dashboard

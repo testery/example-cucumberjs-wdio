@@ -1,19 +1,18 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import LoginPage from '../pages/login.page';
-import { findByPartialText } from '../helpers/elements';
+const testData = require('../../TestData');
 
-// Given I open the login page
-Given('I open the login page', () => {
+// Given I am an unauthenticated user viewing the login page
+Given('I am an unauthenticated user viewing the login page', ()=> {
     LoginPage.open();
 });
 
-// When I login with <username> and <password>
-When(/^I login with ([^"]*)? and ([^"]*)?$/, (username: string, password: string) => {
-    LoginPage.login(username, password);
+// When I log in using my email and password
+When('I log in using my email and password', ()=> {
+    LoginPage.loginAs(testData.testUser, testData.testPass);
 });
 
-// Then I should see a message saying <message>
-Then(/^I should see a message saying ([^"]*)?$/, (message: string) => {
-    let elem = findByPartialText(message);
-    expect(elem).toBeDisplayed();
+// Then I am redirected the Account Dashboard
+Then('I am redirected the Account Dashboard', ()=>{
+    expect(browser).toHaveUrlContaining('secure');
 });
