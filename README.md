@@ -11,7 +11,7 @@ Packages used are defined in [`/e2e/package.json`](/e2e/package.json).
 [POM (Page Object Model)](https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/) </br>
 
 ## Quick Start Guide
-Click the image below and then select the 'Download' button. The viedo is ~ 2 minutes.
+Click the image below and then select the 'Download' button. The video is ~ 2 minutes.
 [![Screenshot](/quick-start-guide.png)](/quick-start-guide.mp4)
 
 ## Test Writers - One Time Setup
