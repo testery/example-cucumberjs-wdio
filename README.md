@@ -11,10 +11,10 @@ Packages used are defined in [`/e2e/package.json`](/e2e/package.json).
 [POM (Page Object Model)](https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/) </br>
 
 ## Quick Start Guide
-Click the image below and then select the 'Download' button. This video will cover the next section, "Local Setup", of this README.
+Click the image below and then select the 'Download' button. The viedo is ~ 2 minutes.
 [![Screenshot](/quick-start-guide.png)](/quick-start-guide.mp4)
 
-## Local Setup
+## Test Writers - One Time Setup
 
 ### Download and Install Packages
 1. Download and install the "LTS" version of [NodeJs](https://nodejs.org/en/)
@@ -38,17 +38,21 @@ Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored
    * Note that the above template might be out-of-date, please check with your team lead and peers
 1. Make the necessary changes and save the file
 
-### Run All Test Locally
+## Writing Tests
+Click the image below and then select the 'Download' button. The video is ~ 15 minutes.
+[![Screenshot](/writing-your-first-test.png)](/writing-your-first-test.mp4)
+
+### Run All Feature Files
 1. (If not already open) Select "Terminal" > "New Terminal"
 1. Type or paste in `npm test` and then press [Enter]
    * This is wired up in `package.json > "scripts" > "test"`
 
-### Run Test File Locally
+### Run Feature File(s) by Name
 1. (If not already open) Select "Terminal" > "New Terminal"
 1. Type or paste in `npm test -- --spec {featureName}` and then press [Enter]
    * For example, `npm test -- --spec login` will run any/all .feature files (specs) with `login` in the file name  
 
-## Account Admins - One Time Setup
+## Account Admin - One Time Setup
 
 ### Setup Project in Testery Web App
 [Prerequisite] You must have a Testery account.
