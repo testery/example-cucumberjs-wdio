@@ -77,7 +77,7 @@ Watch our Writing Your First Test walkthrough on YouTube. The video is ~ 14 minu
      4. Retry Failed Tests: `Yes`
      5. Are screenshot names outputted to test output?: `Yes`
 
-### Setup Envrionment in Testery Web App
+### Setup Environment(s) in Testery Web App
 1. Select "Environments" from the navigation menu
 1. Fill out the environment information and save
    * Here are the values when using the `example-cucumberjs-wdio` repo:
