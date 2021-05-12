@@ -11,7 +11,7 @@ Packages used are defined in [`/e2e/package.json`](/e2e/package.json).
 [POM (Page Object Model)](https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/) </br>
 
 ## Quick Start Guide
-Watch our Quick Start Guide walktrough on YouTube. The video is ~ 2 minutes.
+Watch our Quick Start Guide walkthrough on YouTube. The video is ~ 2 minutes.
 [![Screenshot](/quick-start-guide.png)](https://www.youtube.com/watch?v=JStE_tMkJUQ)
 
 ## Test Writers - One Time Setup
@@ -39,7 +39,7 @@ Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored
 1. Make the necessary changes and save the file
 
 ## Writing Tests
-Watch our Writing Your First Test walktrough on YouTube. The video is ~ 14 minutes.
+Watch our Writing Your First Test walkthrough on YouTube. The video is ~ 14 minutes.
 [![Screenshot](/writing-your-first-test.png)](https://www.youtube.com/watch?v=XU2Q813VVy4)
 
 ### Run All Feature Files
