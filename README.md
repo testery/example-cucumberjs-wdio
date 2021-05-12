@@ -39,7 +39,7 @@ Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored
 1. Make the necessary changes and save the file
 
 ## Writing Tests
-Click the image below and then select the 'Download' button. The video is ~ 14 minutes.
+Watch our Writing Your First Test walktrough on YouTube. The video is ~ 14 minutes.
 [![Screenshot](/writing-your-first-test.png)](https://www.youtube.com/watch?v=XU2Q813VVy4)
 
 ### Run All Feature Files
