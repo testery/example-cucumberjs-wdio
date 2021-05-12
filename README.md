@@ -38,10 +38,6 @@ Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored
    * Note that the above template might be out-of-date, please check with your team lead and peers
 1. Make the necessary changes and save the file
 
-## Writing Tests
-Watch our Writing Your First Test walkthrough on YouTube. The video is ~ 14 minutes.
-[![Screenshot](/writing-your-first-test.png)](https://www.youtube.com/watch?v=XU2Q813VVy4)
-
 ### Run All Feature Files
 1. (If not already open) Select "Terminal" > "New Terminal"
 1. Type or paste in `npm test` and then press [Enter]
@@ -51,6 +47,10 @@ Watch our Writing Your First Test walkthrough on YouTube. The video is ~ 14 minu
 1. (If not already open) Select "Terminal" > "New Terminal"
 1. Type or paste in `npm test -- --spec {featureName}` and then press [Enter]
    * For example, `npm test -- --spec login` will run any/all .feature files (specs) with `login` in the file name  
+
+## Writing Tests
+Watch our Writing Your First Test walkthrough on YouTube. The video is ~ 14 minutes.
+[![Screenshot](/writing-your-first-test.png)](https://www.youtube.com/watch?v=XU2Q813VVy4)
 
 ## Account Admin - One Time Setup
 
