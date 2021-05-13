@@ -4,16 +4,16 @@ const testData = require('../../TestData');
 class LoginPage {
 
     /** The `input` for "Username". */
-    get inputUsername() { return "#username" }
+    get inputUsername() { return $("#username") };
     /** The `input` for "Password". */
-    get inputPassword() { return "#password" }
+    get inputPassword() { return $("#password") };
     /** The `button` to submit a form. */
-    get buttonSubmit() { return "//button[@type='submit']" }
+    get buttonSubmit() { return $("//button[@type='submit']") };
 
     /** Opens `this` page. */
     open() {
         return browser.url(testData.baseWebUrl + '/login');
-    }
+    };
 
     /** Log in using the given username and password
      * @param username The username to submit
@@ -26,11 +26,11 @@ class LoginPage {
         if (password === "valid") {
             password = testData.testPass;
         }
-        browser.$(this.inputUsername).waitForClickable({ timeout: testData.defaultTimeout });
-        browser.$(this.inputUsername).setValue(username);
-        browser.$(this.inputPassword).setValue(password);
-        browser.$(this.buttonSubmit).click();
-    }
+        this.inputUsername.waitForClickable({ timeout: testData.defaultTimeout });
+        this.inputUsername.setValue(username);
+        this.inputPassword.setValue(password);
+        this.buttonSubmit.click();
+    };
 
 }
 
