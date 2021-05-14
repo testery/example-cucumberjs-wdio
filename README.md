@@ -24,7 +24,7 @@ Watch our Quick Start Guide walkthrough on YouTube. The video is ~ 2 minutes.
 1. Select "Terminal" > "New Terminal"
 1. Type or paste in `npm install` and then press [Enter]
 
-### Create a .env file Locally
+### Create a .env File Locally
 Note: The `.env` ("dot e-n-v") will contain user secrets so will be `.gitignored` and never checked in.
 1. Open the [`e2e`](/e2e) folder in [VS Code](https://code.visualstudio.com/)
 1. Right-click in the empty space of the 'Explorer' pane in VS Code and then select 'New File'
