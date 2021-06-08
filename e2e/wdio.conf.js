@@ -197,8 +197,13 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // beforeSession: function (config, capabilities, specs) {
-    // },
+    beforeSession: function (config, capabilities, specs) {
+        let fs = require('fs');
+        if (fs.existsSync("../screenshots")) {
+            console.log("Screenshots dir being deleted.");
+            fs.rmdirSync("../screenshots", { recursive: true });
+        }
+    },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.
