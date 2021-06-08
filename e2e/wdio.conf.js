@@ -239,14 +239,8 @@ exports.config = {
     /**
      * Runs after a Cucumber step
      */
-     afterStep: function (step, context) {
-        let fs = require('fs');
-        if (!fs.existsSync("../screenshots")) {
-            console.log("Screenshots dir being created.");
-            fs.mkdirSync("../screenshots");
-        }
-        browser.saveScreenshot("../screenshots/" + new Date().getTime().toString() + ".png");
-    },
+    // afterStep: function (step, context) {
+    // },
     /**
      * Runs after a Cucumber scenario
      */
@@ -265,8 +259,14 @@ exports.config = {
      * @param {Number} result 0 - command success, 1 - command error
      * @param {Object} error error object if any
      */
-    // afterCommand: function (commandName, args, result, error) {
-    // },
+    afterCommand: function (commandName, args, result, error) {
+        let fs = require('fs');
+        if (!fs.existsSync("../screenshots")) {
+            console.log("Screenshots dir being created.");
+            fs.mkdirSync("../screenshots");
+        }
+        browser.saveScreenshot("../screenshots/" + new Date().getTime().toString() + ".png");
+    },
     /**
      * Gets executed after all tests are done. You still have access to all global variables from
      * the test.
