@@ -1,4 +1,4 @@
-const testData = require('../../TestData');
+import testData = require('../../TestData');
 
 /** URL looks like: `{baseUrl}/login` */
 class LoginPage {
@@ -11,7 +11,7 @@ class LoginPage {
     get buttonSubmit() { return $("//button[@type='submit']") };
 
     /** Opens `this` page. */
-    open() {
+    open = async () => {
         return browser.url(testData.baseWebUrl + '/login');
     };
 
@@ -19,14 +19,14 @@ class LoginPage {
      * @param username The username to submit
      * @param password The password to submit
      */
-    login(username: string, password: string) {
+    login = async (username: string, password: string) => {
         if (username === "valid") {
             username = testData.testUser;
         }
         if (password === "valid") {
             password = testData.testPass;
         }
-        this.inputUsername.waitForClickable({ timeout: testData.defaultTimeout });
+        this.inputUsername.waitForClickable();
         this.inputUsername.setValue(username);
         this.inputPassword.setValue(password);
         this.buttonSubmit.click();
