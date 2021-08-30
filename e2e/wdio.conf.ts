@@ -1,4 +1,4 @@
-exports.config = {
+export const config: WebdriverIO.Config = {
     //
     // ====================
     // Runner Configuration
@@ -197,12 +197,14 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    beforeSession: function (config, capabilities, specs) {
-        let fs = require('fs');
-        if (fs.existsSync("../screenshots")) {
+    beforeSession: async function (config, capabilities, specs) {
+        let fs = await require('fs');
+        if (await fs.existsSync("../screenshots")) {
             console.log("Screenshots dir being deleted.");
-            fs.rmdirSync("../screenshots", { recursive: true });
+            await fs.rmdirSync("../screenshots", { recursive: true });
         }
+        console.log("Screenshots dir being created.");
+        await fs.mkdirSync("../screenshots");
     },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
@@ -211,8 +213,8 @@ exports.config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {Object}         browser      instance of created browser/device session
      */
-    before: function (capabilities, specs) {
-        browser.maximizeWindow();
+    before: async function (capabilities, specs) {
+        await browser.maximizeWindow();
     },
     /**
      * Runs before a WebdriverIO command gets executed.
@@ -259,13 +261,11 @@ exports.config = {
      * @param {Number} result 0 - command success, 1 - command error
      * @param {Object} error error object if any
      */
-    afterCommand: function (commandName, args, result, error) {
-        let fs = require('fs');
-        if (!fs.existsSync("../screenshots")) {
-            console.log("Screenshots dir being created.");
-            fs.mkdirSync("../screenshots");
+    afterCommand: async function (commandName, args, result, error) {
+        const ignore = ["execute", "$"];
+        if (!ignore.includes(commandName)) {
+            await browser.saveScreenshot("../screenshots/" + new Date().getTime().toString() + ".png");
         }
-        browser.saveScreenshot("../screenshots/" + new Date().getTime().toString() + ".png");
     },
     /**
      * Gets executed after all tests are done. You still have access to all global variables from

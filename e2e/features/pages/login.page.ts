@@ -26,10 +26,10 @@ class LoginPage {
         if (password === "valid") {
             password = testData.testPass;
         }
-        this.inputUsername.waitForClickable();
-        this.inputUsername.setValue(username);
-        this.inputPassword.setValue(password);
-        this.buttonSubmit.click();
+        await this.inputUsername.waitForClickable();
+        await this.inputUsername.setValue(username);
+        await this.inputPassword.setValue(password);
+        await this.buttonSubmit.click();
     };
 
 }

@@ -13,6 +13,6 @@ When(/^I login with ([^"]*)? and ([^"]*)?$/, async (username: string, password: 
 
 // Then I should see a message saying <message>
 Then(/^I should see a message saying ([^"]*)?$/, async (message: string) => {
-    let elem = $('//*[contains(text(),"' + message + '")]');
-    expect(elem).toBeDisplayed();
+    let elem = await  $('//*[contains(text(),"' + message + '")]');
+    await expect(elem).toBeDisplayed();
 });

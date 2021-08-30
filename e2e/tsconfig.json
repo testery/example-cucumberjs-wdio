@@ -1,11 +1,10 @@
 {
     "compilerOptions": {
-        "target": "es5",  
-        "module": "commonjs",
-        "sourceMap": true,
-        "types": ["node", "webdriverio/sync", "@wdio/cucumber-framework", "expect-webdriverio"]
-    },
-    "include": [
-        "./features/**/*.ts"
-    ]
+        "types": [
+            "node",
+            "webdriverio/async",
+            "@wdio/cucumber-framework",
+            "expect-webdriverio"
+        ]
+    }
 }
