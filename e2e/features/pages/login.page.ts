@@ -34,4 +34,5 @@ class LoginPage {
 
 }
 
+/** URL looks like: `{baseUrl}/login` */
 export default new LoginPage();
