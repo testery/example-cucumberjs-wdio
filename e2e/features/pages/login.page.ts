@@ -11,7 +11,7 @@ class LoginPage {
     get buttonSubmit() { return $("//button[@type='submit']") };
 
     /** Opens `this` page. */
-    open = async () => {
+    async open () {
         return browser.url(testData.baseWebUrl + '/login');
     };
 
@@ -19,7 +19,7 @@ class LoginPage {
      * @param username The username to submit
      * @param password The password to submit
      */
-    login = async (username: string, password: string) => {
+    async login (username: string, password: string) {
         if (username === "valid") {
             username = testData.testUser;
         }
