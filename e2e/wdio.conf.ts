@@ -262,7 +262,7 @@ export const config: WebdriverIO.Config = {
      * @param {Object} error error object if any
      */
     afterCommand: async function (commandName, args, result, error) {
-        const ignore = ["execute", "$"];
+        const ignore = ["execute", "$", "$$"];
         if (!ignore.includes(commandName)) {
             await browser.saveScreenshot("../screenshots/" + new Date().getTime().toString() + ".png");
         }
